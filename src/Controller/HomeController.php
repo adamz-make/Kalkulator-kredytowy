@@ -25,6 +25,7 @@ class HomeController extends AbstractController
      */
     public function calculate()
     {
+        //test3
         $postData = json_decode(file_get_contents("php://input"));
         $calculation = new Calculation($postData->value, $postData->years, $postData->percent, $postData->paymentsInYear);
         $page = $postData->page;
